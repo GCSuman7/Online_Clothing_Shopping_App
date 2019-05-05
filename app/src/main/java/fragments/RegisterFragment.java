@@ -14,10 +14,10 @@ import android.widget.Toast;
 import com.example.onlineclothingshoppingapp.R;
 
 public class RegisterFragment extends Fragment implements View.OnClickListener{
-    private EditText register_name;
-    private EditText register_email;
-    private EditText register_password;
-    private Button btn_register;
+    private EditText etname;
+    private EditText etusername;
+    private EditText etpassword;
+    private Button btnregister;
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -27,12 +27,12 @@ public class RegisterFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
-        register_name = view.findViewById(R.id.register_name);
-        register_email = view.findViewById(R.id.register_email);
-        register_password = view.findViewById(R.id.register_password);
-        btn_register = view.findViewById(R.id.btn_register);
+        etname = view.findViewById(R.id.register_name);
+        etusername = view.findViewById(R.id.register_email);
+        etpassword = view.findViewById(R.id.register_password);
+        btnregister = view.findViewById(R.id.btn_register);
 
-        btn_register.setOnClickListener(this);
+        btnregister.setOnClickListener(this);
 
         return view;
     }
@@ -46,9 +46,9 @@ public class RegisterFragment extends Fragment implements View.OnClickListener{
     public void Register() {
         SharedPreferences sharedPreferences=getContext().getSharedPreferences("register", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.putString("name",register_name.getText().toString());
-        editor.putString("email",register_email.getText().toString());
-        editor.putString("password",register_password.getText().toString());
+        editor.putString("name", etname.getText().toString());
+        editor.putString("email", etusername.getText().toString());
+        editor.putString("password", etpassword.getText().toString());
         editor.commit();
         Toast.makeText(getContext(),"Registration Successful",Toast.LENGTH_LONG).show();
     }

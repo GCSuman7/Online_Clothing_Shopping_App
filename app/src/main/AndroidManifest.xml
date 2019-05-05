@@ -13,7 +13,7 @@
         <activity android:name=".DashboardActivity"></activity>
         <activity android:name=".AddItemActivity"></activity>
         <activity android:name=".ViewPagerActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ItemDetailsActivity$MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

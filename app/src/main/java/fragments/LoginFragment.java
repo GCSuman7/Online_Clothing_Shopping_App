@@ -12,18 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.onlineclothingshoppingapp.AddItemActivity;
 import com.example.onlineclothingshoppingapp.DashboardActivity;
 import com.example.onlineclothingshoppingapp.R;
-import com.example.onlineclothingshoppingapp.ViewPagerActivity;
-
-import java.io.PrintStream;
 
 
 public class LoginFragment extends Fragment implements View.OnClickListener{
-    private EditText login_email;
-    private EditText login_password;
-    private Button btn_login;
+    private EditText etusername;
+    private EditText etpassword;
+    private Button btnlogin;
 
 
     public LoginFragment() {
@@ -34,11 +30,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        login_email = view.findViewById(R.id.login_email);
-        login_password = view.findViewById(R.id.login_password);
-        btn_login = view.findViewById(R.id.btn_login);
+        etusername = view.findViewById(R.id.login_email);
+        etpassword = view.findViewById(R.id.login_password);
+        btnlogin = view.findViewById(R.id.btn_login);
 
-        btn_login.setOnClickListener(this);
+        btnlogin.setOnClickListener(this);
 
         return view;
     }
@@ -53,7 +49,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("register", Context.MODE_PRIVATE);
         String email = sharedPreferences.getString("email", "");
         String password = sharedPreferences.getString("password", "");
-        if (email.equals(login_email.getText().toString()) && password.equals(login_password.getText().toString())) {
+        if (email.equals(etusername.getText().toString()) && password.equals(etpassword.getText().toString())) {
             Toast.makeText(getContext(), "Successful", Toast.LENGTH_SHORT).show();
             Intent intent=new Intent(getContext(), DashboardActivity.class);
             intent.putExtra("myMessage","Welcome to the DashBoard");
