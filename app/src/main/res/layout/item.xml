@@ -3,22 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp">
+    android:layout_margin="30dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/itemImg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/cap"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+       />
 
     <TextView
         android:id="@+id/itemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/itemImg"
         android:hint="Item Name"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@id/itemImg" />
 
@@ -27,11 +27,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/itemName"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/itemImg"
         android:hint="Price"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/itemImg" />
 
@@ -40,11 +40,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/itemImg"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/itemImg"
         android:hint="Description"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:visibility="gone"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/itemImg" />

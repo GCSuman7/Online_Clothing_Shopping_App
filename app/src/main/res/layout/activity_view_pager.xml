@@ -13,7 +13,7 @@
         android:id="@+id/tabId"
         app:tabTextColor="#ffffff"
         app:tabIndicatorColor="#ffffff"
-        android:background="#79B47C" />
+        android:background="@color/colorPrimary" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
